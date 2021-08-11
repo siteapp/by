@@ -1,2 +1,1 @@
-# by
-ReaxrJS by Aliaksandr **Kavaliou**
+# ReaxrJS by Aliaksandr **Kavaliou**
