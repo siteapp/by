@@ -1,0 +1,29 @@
+.logo{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+
+  img{
+    width: 50px;
+  }
+
+  .title{
+    font-size: 26px;
+    color: #fff;
+
+    &:hover{
+      .slogan{
+        opacity: 1;
+        height: auto;
+      }
+    }
+
+    .slogan{
+      font-size: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-out;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
