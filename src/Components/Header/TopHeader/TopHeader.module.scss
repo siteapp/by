@@ -1,4 +1,28 @@
 .opacity{
-  opacity: 0;
-  display: none;
+  color: #d2d2d2;
+  text-transform: lowercase;
+  display: flex;
+  /*opacity: 0;
+  display: none;*/
+
+  .item{
+    padding: 0rem 1rem;
+    &:nth-child(1){
+      padding: 0;
+    }
+
+    .title{
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .value{
+      font-style: italic;
+
+      svg{
+        width: 20px;
+        fill: #b1b1b1;
+      }
+    }
+  }
 }

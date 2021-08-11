@@ -18,21 +18,21 @@ const Header = (props) => {
 
     return(
         <>
-            <Row justify="center">
-                <Col span={1}>
+            <Row>
+                <Col>
                     <TopHeader
 
                     />
                 </Col>
             </Row>
             <Row className={h.flex}>
-                <Col span={6}>
+                <Col span={5}>
                     <Logo
                         logo = {logo}
                     />
                 </Col>
 
-                <Col span={6} className={h.menu}>
+                <Col span={12} className={h.menu}>
                     <nav>
                         <ul>
                             <Menu

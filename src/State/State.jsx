@@ -16,6 +16,16 @@ class State extends React.Component {
                     path: "/about",
                     exact: true,
                     main: () => 'About'
+                },
+                {
+                    path: "/web-developen",
+                    exact: true,
+                    main: () => 'Web site'
+                },
+                {
+                    path: "/contacts",
+                    exact: true,
+                    main: () => 'Contacts'
                 }
             ],
             _Logo: Logo,
@@ -51,7 +61,8 @@ class State extends React.Component {
     //editor phone
     editPhoneHeader = event => {
         this.setState({
-            Phone: event
+            Phone: event,
+            Email: 'INFO@GMAIL.COM'
         });
     }
 
