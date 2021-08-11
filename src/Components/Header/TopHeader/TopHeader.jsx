@@ -3,6 +3,11 @@ import t from './TopHeader.module.scss';
 import 'antd/dist/antd.css';
 import { AntDesignOutlined, Html5Outlined, BorderlessTableOutlined } from '@ant-design/icons';
 
+//close TopHeader
+const closeTopHeader = (event) => {
+    console.log(event)
+}
+
 const TopHeader = () => {
     return(
         <div className={t.opacity}>
@@ -23,6 +28,9 @@ const TopHeader = () => {
                 <span className={t.value}>React.js, JQuery, Bootstrap 4, Materialize, Ant Design</span>
             </div>
 
+            <div>
+                <a href="#" onClick={() => closeTopHeader('close')}>close</a>
+            </div>
         </div>
     )
 }

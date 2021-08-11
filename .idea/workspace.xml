@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="TestDriveGitHub">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.module.scss" afterDir="false" />
+    <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/State.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628682396952</updated>
       <workItem from="1628682404128" duration="1393000" />
-      <workItem from="1628689125942" duration="2478000" />
+      <workItem from="1628689125942" duration="2812000" />
     </task>
     <task id="LOCAL-00001" summary="TestDriveGitHub">
       <created>1628689506834</created>
@@ -63,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628689579812</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UPDATE: Menu, TopHeader, Header, State">
+      <created>1628691808469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628691808469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,13 +72,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TestDriveGitHub" />
     <MESSAGE value="ReaxrJS by Aliaksandr Kavaliou" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReaxrJS by Aliaksandr Kavaliou" />
+    <MESSAGE value="UPDATE: Menu, TopHeader, Header, State" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Menu, TopHeader, Header, State" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1628689575456">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1628691803103">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628689575456" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1628691803103" />
     <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1628689177023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -103,10 +104,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1628689398042" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1628689583281">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1628691813198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628689583281" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628691813198" />
     <state x="761" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1628689184593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
