@@ -17,7 +17,8 @@ const App = (props) => {
         Phone,
         Email,
         editPhoneHeader,
-        metaTitle
+        metaTitle,
+        TestDriveGitHub
     } = props;
 
     return(
