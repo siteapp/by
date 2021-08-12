@@ -14,14 +14,21 @@ const Header = (props) => {
         phone = props.Phone,
         email = props.Email,
         metaTitle = props.metaTitle,
-        editPhoneHeader = props.editPhoneHeader;
+        _TopHEaderBar = props._TopHEaderBar,
+        _CloseTopHeaderBar = props._CloseTopHeaderBar,
+        closeTopHeader = props.closeTopHeader,
+        editPhoneHeader = props.editPhoneHeader,
+        openTopBar = props.openTopBar;
 
     return(
         <>
             <Row>
                 <Col>
                     <TopHeader
-
+                        _TopHEaderBar={_TopHEaderBar}
+                        _CloseTopHeaderBar = {_CloseTopHeaderBar}
+                        closeTopHeader = {closeTopHeader}
+                        openTopBar = {openTopBar}
                     />
                 </Col>
             </Row>

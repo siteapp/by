@@ -6,9 +6,13 @@
   width: 1140px;
   margin: 0 auto;
 }
-.background{
-  background: #4a4a48;
+.background{background: linear-gradient(90deg,#4854a2,#772088);
   font-family: 'Segoe UI';
   padding: 0.5rem 0rem;
 }
 
+.closeTopHEaderBar{
+  opacity: 0;
+  visibility: hidden;
+  transition: .55s opacity, .55s visibility;
+}

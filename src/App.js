@@ -16,8 +16,12 @@ const App = (props) => {
         Logo,
         Phone,
         Email,
+        _TopHEaderBar,
         editPhoneHeader,
-        metaTitle
+        metaTitle,
+        closeTopHeader,
+        openTopBar,
+        _CloseTopHeaderBar
     } = props;
 
     return(
@@ -31,8 +35,12 @@ const App = (props) => {
                                 Logo = {Logo}
                                 Phone = {Phone}
                                 Email = {Email}
+                                _TopHEaderBar = {_TopHEaderBar}
+                                _CloseTopHeaderBar = {_CloseTopHeaderBar}
                                 editPhoneHeader = {editPhoneHeader}
                                 metaTitle = {metaTitle}
+                                closeTopHeader = {closeTopHeader}
+                                openTopBar = {openTopBar}
                             />
                         </div>
                     </div>

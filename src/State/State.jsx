@@ -31,11 +31,15 @@ class State extends React.Component {
             _Logo: Logo,
             Phone: '+375(33)640-98-68',
             Email: 'ALIAKSANDR.KOVALIOU@GMAIL.COM',
-            _MetaTitle: 'ᐅ Aliaksandr Kavaliou'
+            _MetaTitle: 'ᐅ Aliaksandr Kavaliou',
+            _TopHEaderBar: 'open',
+            _CloseTopHeaderBar: 'closeTopBar'
         };
 
         this.editPhoneHeader = this.editPhoneHeader.bind(this);
         this.metaTitle = this.metaTitle.bind(this);
+        this.closeTopHeader = this.closeTopHeader.bind(this);
+        this.openTopBar = this.openTopBar.bind(this);
     }
 
     componentDidMount() {
@@ -72,13 +76,35 @@ class State extends React.Component {
         localStorage.setItem('page', e)
     }
 
+    //close TopHeader
+    closeTopHeader = (event) => {
+        this.setState({
+            _TopHEaderBar: event,
+            _CloseTopHeaderBar: 'closeTopBar'
+        });
+
+        localStorage.setItem('closeTopHEaderBar', '1')
+    }
+
+    //delete localStorage closeTopHEaderBar
+    openTopBar = (event) =>{
+        this.setState({
+            _TopHEaderBar: 'openTopBarElement',
+            _CloseTopHeaderBar: 'openTopBar'
+        });
+
+        localStorage.removeItem('closeTopHEaderBar');
+    }
+
     render(){
         const {
             Menu,
             _Logo,
             Phone,
             Email,
-            _MetaTitle
+            _MetaTitle,
+            _TopHEaderBar,
+            _CloseTopHeaderBar
         } = this.state;
 
         //save page name | MetaTitle
@@ -90,8 +116,12 @@ class State extends React.Component {
                 Logo = {_Logo}
                 Phone = {Phone}
                 Email = {Email}
+                _TopHEaderBar = {_TopHEaderBar}
+                _CloseTopHeaderBar = {_CloseTopHeaderBar}
                 editPhoneHeader = {this.editPhoneHeader}
                 metaTitle = {this.metaTitle}
+                closeTopHeader = {this.closeTopHeader}
+                openTopBar = {this.openTopBar}
             />
         )
     }
