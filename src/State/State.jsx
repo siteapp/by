@@ -31,7 +31,7 @@ class State extends React.Component {
             _Logo: Logo,
             Phone: '+375(33)640-98-68',
             Email: 'ALIAKSANDR.KOVALIOU@GMAIL.COM',
-            _MetaTitle: 'ᐅ Aliaksandr Kavaliou',
+            _MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou',
             _TopHEaderBar: 'open',
             _CloseTopHeaderBar: 'closeTopBar'
         };
