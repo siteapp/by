@@ -5,17 +5,24 @@ import { AntDesignOutlined, Html5Outlined, BorderlessTableOutlined, CloseCircleO
 
 const TopHeader = (props) => {
     let _TopHEaderBar = props._TopHEaderBar,
+        _Language = props._Language,
+        languageChange = props.languageChange,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
         closeTopHeader = props.closeTopHeader,
         statusCloseTopHeaderBar = localStorage.getItem('closeTopHEaderBar'),
         closeTopHEaderBar = 'closeTopHEaderBar',
         openTopBar = props.openTopBar;
-
     return(
         <>
             <div className={`${t.opacity} ${statusCloseTopHeaderBar === '1' ? closeTopHEaderBar : _TopHEaderBar}`}>
                 <div className={t.item}>
-                    <span className={t.title}>TECHNOLOGIES: </span>
+                    <span className={t.title}>
+                        {localStorage.getItem('language') !== null ?
+                            localStorage.getItem('language') === 'ru' ? 'ТЕХНОЛОГИИ:' : 'TECHNOLOGIES:'
+                                :
+                            'TECHNOLOGIES:'
+                        }
+                    </span>
                     <span className={t.value}>
                     <AntDesignOutlined />
                     <Html5Outlined />
@@ -27,15 +34,27 @@ const TopHeader = (props) => {
                 </div>
 
                 <div className={t.item}>
-                    <span className={t.title}>FRAMEWORKS AND LIBRARIES: </span>
+                    <span className={t.title}>
+                        {localStorage.getItem('language') !== null ?
+                            localStorage.getItem('language') === 'ru' ? 'фреймворк и библиотеки: ' : 'FRAMEWORKS AND LIBRARIES: '
+                            :
+                            'FRAMEWORKS AND LIBRARIES: '
+                        }
+                    </span>
                     <span className={t.value}>React.js, JQuery, Bootstrap 4, Materialize, Ant Design</span>
                 </div>
+
+                <select value={_Language} onChange={languageChange}>
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
 
                 <div>
                     <a href="#" onClick={() => closeTopHeader('closeTopHEaderBar')}>
                         <CloseCircleOutlined style={{ fontSize: '16px', color: '#ff6a6a' }} />
                     </a>
                 </div>
+
             </div>
             <div className={`${t.contentTriangle} ${statusCloseTopHeaderBar === '1' ? _CloseTopHeaderBar : 'openTopBar'}`} onClick={() => openTopBar('openTopBar')}>
                 <div className={t.triangle}></div>

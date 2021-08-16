@@ -12,14 +12,32 @@ const Menu = (props) => {
 
     return(
         <>
-            {menu.map((m, index) =>
-                <li key={index} className={i.item}>
-                    <NavLink  to={m.path} onClick={() => metaTitle(m.main())}>
-                        <span>{m.main()}</span>
-                    </NavLink >
-                </li>
-            )}
-
+            {localStorage.getItem('language') !== null ?
+                localStorage.getItem('language') === 'ru' ?
+                    menu.map((m, index) =>
+                        <li key={index} className={i.item}>
+                            <NavLink  to={m.path} onClick={() => metaTitle(m.mainRu())}>
+                                <span>{m.mainRu()}</span>
+                            </NavLink >
+                        </li>
+                    )
+                    :
+                    menu.map((m, index) =>
+                        <li key={index} className={i.item}>
+                            <NavLink  to={m.path} onClick={() => metaTitle(m.mainEn())}>
+                                <span>{m.mainEn()}</span>
+                            </NavLink >
+                        </li>
+                    )
+                :
+                menu.map((m, index) =>
+                    <li key={index} className={i.item}>
+                        <NavLink  to={m.path} onClick={() => metaTitle(m.mainEn())}>
+                            <span>{m.mainEn()}</span>
+                        </NavLink >
+                    </li>
+                )
+            }
         </>
     )
 }

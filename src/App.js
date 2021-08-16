@@ -21,7 +21,9 @@ const App = (props) => {
         metaTitle,
         closeTopHeader,
         openTopBar,
-        _CloseTopHeaderBar
+        _CloseTopHeaderBar,
+        _Language,
+        languageChange
     } = props;
 
     return(
@@ -35,6 +37,8 @@ const App = (props) => {
                                 Logo = {Logo}
                                 Phone = {Phone}
                                 Email = {Email}
+                                _Language = {_Language}
+                                languageChange = {languageChange}
                                 _TopHEaderBar = {_TopHEaderBar}
                                 _CloseTopHeaderBar = {_CloseTopHeaderBar}
                                 editPhoneHeader = {editPhoneHeader}
@@ -50,14 +54,36 @@ const App = (props) => {
                         <Main />
                         <>
                             <Switch>
-                                {Menu.map((route, index) => (
-                                    <Route
-                                        key={index}
-                                        path={route.path}
-                                        exact={route.exact}
-                                        children={<route.main />}
-                                    />
-                                ))}
+                                {localStorage.getItem('language') !== null ?
+                                    localStorage.getItem('language') === 'ru' ?
+                                        Menu.map((route, index) => (
+                                            <Route
+                                                key={index}
+                                                path={route.path}
+                                                exact={route.exact}
+                                                children={<route.mainRu />}
+                                            />
+                                        ))
+                                        :
+                                        Menu.map((route, index) => (
+                                            <Route
+                                                key={index}
+                                                path={route.path}
+                                                exact={route.exact}
+                                                children={<route.mainEn />}
+                                            />
+                                        ))
+                                    :
+                                    Menu.map((route, index) => (
+                                        <Route
+                                            key={index}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            children={<route.mainEn />}
+                                        />
+                                    ))
+                                }
+
                             </Switch>
                         </>
                     </div>

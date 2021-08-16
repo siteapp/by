@@ -7,6 +7,7 @@
   opacity: 1;
   visibility: visible;
   height: 30px;
+  align-items: center;
 
   .item{
     padding: 0rem 1rem;
@@ -27,6 +28,17 @@
         width: 20px;
         fill: #b1b1b1;
       }
+    }
+  }
+
+  select{
+    background: no-repeat;
+    outline: none;
+    border: 0px solid;
+    margin-right: 1rem;
+
+    option{
+      color: black;
     }
   }
 }

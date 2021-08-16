@@ -14,6 +14,8 @@ const Header = (props) => {
         logo = props.Logo,
         phone = props.Phone,
         email = props.Email,
+        _Language = props._Language,
+        languageChange = props.languageChange,
         metaTitle = props.metaTitle,
         _TopHEaderBar = props._TopHEaderBar,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
@@ -26,7 +28,9 @@ const Header = (props) => {
             <Row>
                 <Col>
                     <TopHeader
-                        _TopHEaderBar={_TopHEaderBar}
+                        _TopHEaderBar = {_TopHEaderBar}
+                        _Language = {_Language}
+                        languageChange = {languageChange}
                         _CloseTopHeaderBar = {_CloseTopHeaderBar}
                         closeTopHeader = {closeTopHeader}
                         openTopBar = {openTopBar}

@@ -10,22 +10,28 @@ class State extends React.Component {
                 {
                     path: "/",
                     exact: true,
-                    main: () => 'Home'
+                    mainEn: () => 'Home',
+                    mainRu: () => 'Главная'
+
                 },
                 {
                     path: "/about",
                     exact: true,
-                    main: () => 'About'
+                    mainEn: () => 'About',
+                    mainRu: () => 'Обо мне'
+
                 },
                 {
                     path: "/web-developen",
                     exact: true,
-                    main: () => 'Web site'
+                    mainEn: () => 'Web site',
+                    mainRu: () => 'Разработка'
                 },
                 {
                     path: "/contacts",
                     exact: true,
-                    main: () => 'Contacts'
+                    mainEn: () => 'Contacts',
+                    mainRu: () => 'Контакты'
                 }
             ],
             _Logo: Logo,
@@ -33,16 +39,33 @@ class State extends React.Component {
             Email: 'ALIAKSANDR.KOVALIOU@GMAIL.COM',
             _MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou',
             _TopHEaderBar: 'open',
-            _CloseTopHeaderBar: 'closeTopBar'
+            _CloseTopHeaderBar: 'closeTopBar',
+            _Language: 'en',
         };
 
         this.editPhoneHeader = this.editPhoneHeader.bind(this);
         this.metaTitle = this.metaTitle.bind(this);
         this.closeTopHeader = this.closeTopHeader.bind(this);
         this.openTopBar = this.openTopBar.bind(this);
+        this.languageChange = this.languageChange.bind(this);
     }
 
     componentDidMount() {
+        localStorage.getItem('language') !== null ?
+            localStorage.getItem('language') === 'ru' ?
+                this.setState({
+                    _Language: localStorage.getItem('language'),
+                    _MetaTitle: '🎉 ᐅ Александр Ковалёв'
+                })
+            :
+                this.setState({
+                    _Language: localStorage.getItem('language'),
+                    _MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou'
+                })
+        :
+            console.log('start react app')
+        ;
+
         const requestOptions = {
             method: 'GET',
             headers: {
@@ -87,7 +110,7 @@ class State extends React.Component {
     }
 
     //delete localStorage closeTopHEaderBar
-    openTopBar = (event) =>{
+    openTopBar = (event) => {
         this.setState({
             _TopHEaderBar: 'openTopBarElement',
             _CloseTopHeaderBar: 'openTopBar'
@@ -95,6 +118,15 @@ class State extends React.Component {
 
         localStorage.removeItem('closeTopHEaderBar');
     }
+
+    //change value Language
+    languageChange = (event) => {
+        this.setState({
+            _Language: event.target.value
+        });
+
+        localStorage.setItem('language', event.target.value)
+     }
 
     render(){
         const {
@@ -104,8 +136,10 @@ class State extends React.Component {
             Email,
             _MetaTitle,
             _TopHEaderBar,
-            _CloseTopHeaderBar
+            _CloseTopHeaderBar,
+            _Language
         } = this.state;
+
 
         //save page name | MetaTitle
         localStorage.getItem('page') === null ? document.title = `${_MetaTitle} | Home` : document.title = `${_MetaTitle} | ${localStorage.getItem('page')}`;
@@ -116,10 +150,12 @@ class State extends React.Component {
                 Logo = {_Logo}
                 Phone = {Phone}
                 Email = {Email}
+                _Language = {_Language}
                 _TopHEaderBar = {_TopHEaderBar}
                 _CloseTopHeaderBar = {_CloseTopHeaderBar}
                 editPhoneHeader = {this.editPhoneHeader}
                 metaTitle = {this.metaTitle}
+                languageChange = {this.languageChange}
                 closeTopHeader = {this.closeTopHeader}
                 openTopBar = {this.openTopBar}
             />
