@@ -2,6 +2,18 @@ import React from 'react';
 import App from '../App';
 import Logo from './../logo.png';
 
+import MainEn from "../Components/Main/En/Main";
+import MainRu from "../Components/Main/Ru/Main";
+
+import AboutEn from "../Components/Page/About/En/About";
+import AboutRu from "../Components/Page/About/Ru/About";
+
+import DevelopenEn from "../Components/Page/Developen/En/Developen";
+import DevelopenRu from "../Components/Page/Developen/Ru/Developen";
+
+import ContactsEn from "../Components/Page/Contacts/En/Contacts";
+import ContactsRu from "../Components/Page/Contacts/Ru/Contacts";
+
 class State extends React.Component {
     constructor(props){
         super(props);
@@ -10,28 +22,36 @@ class State extends React.Component {
                 {
                     path: "/",
                     exact: true,
-                    mainEn: () => 'Home',
-                    mainRu: () => 'Главная'
+                    titleEn: () => 'Home',
+                    titleRu: () => 'Главная',
+                    mainEn: () => <MainEn titleEn = {this.titleEn}/>,
+                    mainRu: () => <MainRu titleRu = {this.titleRu}/>
 
                 },
                 {
                     path: "/about",
                     exact: true,
-                    mainEn: () => 'About',
-                    mainRu: () => 'Обо мне'
+                    titleEn: () => 'About',
+                    titleRu: () => 'Обо мне',
+                    mainEn: () => <AboutEn />,
+                    mainRu: () => <AboutRu />
 
                 },
                 {
                     path: "/web-developen",
                     exact: true,
-                    mainEn: () => 'Web site',
-                    mainRu: () => 'Разработка'
+                    titleEn: () => 'Developen',
+                    titleRu: () => 'Разработка',
+                    mainEn: () => <DevelopenEn />,
+                    mainRu: () => <DevelopenRu />
                 },
                 {
                     path: "/contacts",
                     exact: true,
-                    mainEn: () => 'Contacts',
-                    mainRu: () => 'Контакты'
+                    titleEn: () => 'Contacts',
+                    titleRu: () => 'Контакты',
+                    mainEn: () => <ContactsEn />,
+                    mainRu: () => <ContactsRu />
                 }
             ],
             _Logo: Logo,

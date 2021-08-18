@@ -1,7 +1,6 @@
 import React from 'react';
 import a from './App.module.scss';
 import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
 import 'antd/dist/antd.css';
 import {
@@ -51,7 +50,6 @@ const App = (props) => {
                 </div>
                 <div className={a.container}>
                     <div>
-                        <Main />
                         <>
                             <Switch>
                                 {localStorage.getItem('language') !== null ?

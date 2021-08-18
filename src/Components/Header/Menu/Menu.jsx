@@ -16,24 +16,24 @@ const Menu = (props) => {
                 localStorage.getItem('language') === 'ru' ?
                     menu.map((m, index) =>
                         <li key={index} className={i.item}>
-                            <NavLink  to={m.path} onClick={() => metaTitle(m.mainRu())}>
-                                <span>{m.mainRu()}</span>
+                            <NavLink  to={m.path} onClick={() => metaTitle(m.titleRu())}>
+                                <span>{m.titleRu()}</span>
                             </NavLink >
                         </li>
                     )
                     :
                     menu.map((m, index) =>
                         <li key={index} className={i.item}>
-                            <NavLink  to={m.path} onClick={() => metaTitle(m.mainEn())}>
-                                <span>{m.mainEn()}</span>
+                            <NavLink  to={m.path} onClick={() => metaTitle(m.titleEn())}>
+                                <span>{m.titleEn()}</span>
                             </NavLink >
                         </li>
                     )
                 :
                 menu.map((m, index) =>
                     <li key={index} className={i.item}>
-                        <NavLink  to={m.path} onClick={() => metaTitle(m.mainEn())}>
-                            <span>{m.mainEn()}</span>
+                        <NavLink  to={m.path} onClick={() => metaTitle(m.titleEn())}>
+                            <span>{m.titleEn()}</span>
                         </NavLink >
                     </li>
                 )
