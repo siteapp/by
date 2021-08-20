@@ -1,0 +1,74 @@
+.h1{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+
+  h1{
+    font-family: 'Comfortaa-Regular';
+  }
+}
+
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+
+  .user_image{
+    flex-basis: 15%;
+
+    img{
+      border-radius: 100px;
+      box-shadow: 0 0 7px #666;
+      width: 100%;
+      border: 5px solid transparent;
+      border-image-slice: 1;
+    }
+  }
+  .userInformation{
+    flex-basis: 65%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .item{
+      .title{
+        font-size: 21px;
+        font-weight: 600;
+        font-family: 'Comfortaa-Regular';
+      }
+      .description{
+        font-size: 18px;
+        padding-left: 1rem;
+        line-height: 30px;
+        font-family: 'Comfortaa-Regular';
+      }
+    }
+  }
+  .mobile{
+    flex-basis: 15%;
+
+    img{
+      width: 100%;
+    }
+
+    .mobile__text{
+      font-size: 13px;
+      position: absolute;
+      margin-top: 140px;
+      padding-left: 10px;
+
+      .meta__title{
+        text-align: center;
+        margin-top: 0.3rem;
+        display: block;
+      }
+      .logo{
+        width: 30px;
+        margin: 0 auto;
+        margin-top: 0.5rem;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

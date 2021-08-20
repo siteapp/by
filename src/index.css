@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'gunnyrewritten';
+  src: local('gunnyrewritten'), url(./fonts/gunnyrewritten.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: local('Comfortaa-Light'), url(./fonts/Comfortaa-Light.ttf) format('woff');
+}
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: local('Comfortaa-Regular'), url(./fonts/Comfortaa-Regular.ttf) format('woff');
+}
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: local('Comfortaa-Bold'), url(./fonts/Comfortaa-Bold.ttf) format('woff');
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

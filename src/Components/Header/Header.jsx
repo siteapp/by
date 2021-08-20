@@ -64,7 +64,7 @@ const Header = (props) => {
                     </a>
 
                     <a className={h.email} href={`emailTo:${email}`}>
-                        <span>@</span>
+                        <span></span>
                         <span>{email}</span>
                     </a>
                 </Col>

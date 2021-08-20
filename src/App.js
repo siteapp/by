@@ -77,7 +77,7 @@ const App = (props) => {
                                             key={index}
                                             path={route.path}
                                             exact={route.exact}
-                                            children={<route.mainEn />}
+                                            children={<route.mainEn/>}
                                         />
                                     ))
                                 }

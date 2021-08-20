@@ -4,12 +4,14 @@
   .phone{
     font-size: 20px;
     color: #ffffff;
+    font-family: 'Comfortaa-Light';
   }
 
   .email{
     opacity:0;
     display: block;
     transition: 0.5s;
+    font-family: 'Comfortaa-Light';
   }
 
   svg{
@@ -27,12 +29,14 @@
 
     .phone, svg{
       color: #4a4a48;
+      font-family: 'Comfortaa-Light';
     }
 
     .email{
       opacity:1;
       transition: 0.5s;
       color: #4a4a48;
+      font-family: 'Comfortaa-Light';
     }
   }
 }
@@ -55,18 +59,12 @@
 
         a{
           color: white;
+          font-family: 'Comfortaa-Light';
+
           span{
-            font-size: 20px;
+            font-size: 19px;
           }
         }
-
-        /*&:hover{
-          box-shadow: 0px 0px 2px #3131307a;
-          background-color: #6565637a;
-          border: 1px solid #3e3e3c7a;
-          border-radius: 4px;
-          padding: 0 15px;
-        }*/
       }
     }
   }
@@ -76,6 +74,7 @@
   color: #f75555b3;
   display: block;
   line-height: 5px;
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
+  font-family: 'Comfortaa-Light';
 }

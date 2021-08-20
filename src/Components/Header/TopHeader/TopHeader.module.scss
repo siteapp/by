@@ -19,10 +19,11 @@
     .title{
       font-weight: 500;
       color: #fff;
+      font-family: 'Comfortaa-Light';
     }
 
     .value{
-      font-style: italic;
+      font-family: 'Comfortaa-Light';
 
       svg{
         width: 20px;
@@ -36,6 +37,7 @@
     outline: none;
     border: 0px solid;
     margin-right: 1rem;
+    font-family: 'Comfortaa-Light';
 
     option{
       color: black;
