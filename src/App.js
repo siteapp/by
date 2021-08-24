@@ -16,13 +16,11 @@ const App = (props) => {
         Phone,
         Email,
         _TopHEaderBar,
-        editPhoneHeader,
         metaTitle,
-        closeTopHeader,
-        openTopBar,
         _CloseTopHeaderBar,
         _Language,
-        languageChange
+        languageChange,
+        dispatch
     } = props;
 
     return(
@@ -37,13 +35,12 @@ const App = (props) => {
                                 Phone = {Phone}
                                 Email = {Email}
                                 _Language = {_Language}
-                                languageChange = {languageChange}
                                 _TopHEaderBar = {_TopHEaderBar}
                                 _CloseTopHeaderBar = {_CloseTopHeaderBar}
-                                editPhoneHeader = {editPhoneHeader}
+                                dispatch = {dispatch}
+
+                                languageChange = {languageChange}
                                 metaTitle = {metaTitle}
-                                closeTopHeader = {closeTopHeader}
-                                openTopBar = {openTopBar}
                             />
                         </div>
                     </div>

@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/Ru/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Ru/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/Ru/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Ru/Main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/State.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +89,8 @@
       <workItem from="1629724343479" duration="450000" />
       <workItem from="1629725168975" duration="2547000" />
       <workItem from="1629785801110" duration="123000" />
-      <workItem from="1629803199954" duration="5536000" />
+      <workItem from="1629803199954" duration="6357000" />
+      <workItem from="1629828287239" duration="2316000" />
     </task>
     <task id="LOCAL-00001" summary="TestDriveGitHub">
       <created>1628689506834</created>
@@ -142,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629105101492</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="UPDATE: Portfolio, social, hover 24/08/2021">
+      <created>1629808829326</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629808829326</updated>
+    </task>
+    <task id="LOCAL-00009" summary="UPDATE: Portfolio, social, hover 24/08/2021">
+      <created>1629808913382</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629808913382</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +169,8 @@
     <MESSAGE value="UPDATE: Function Close TopHeader 12/08/2021" />
     <MESSAGE value="UPDATE: Animate logo companent 13/08/2021" />
     <MESSAGE value="UPDATE: Translate (Language) view app 16/08/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Translate (Language) view app 16/08/2021" />
+    <MESSAGE value="UPDATE: Portfolio, social, hover 24/08/2021" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Portfolio, social, hover 24/08/2021" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1629105103163">
@@ -171,14 +185,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629301008090" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1629105096602">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1629808909259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1629105096602" />
-    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1629785923372">
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1629808909259" />
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1629816136823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629785923372" />
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629816136823" />
     <state width="1899" height="88" key="GridCell.Tab.0.bottom" timestamp="1628843147123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -199,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1628689398042" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1629105109163">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1629808916806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629105109163" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629808916806" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629725180192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

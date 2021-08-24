@@ -8,10 +8,10 @@ const TopHeader = (props) => {
         _Language = props._Language,
         languageChange = props.languageChange,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
-        closeTopHeader = props.closeTopHeader,
         statusCloseTopHeaderBar = localStorage.getItem('closeTopHEaderBar'),
         closeTopHEaderBar = 'closeTopHEaderBar',
-        openTopBar = props.openTopBar;
+        dispatch = props.dispatch;
+
     return(
         <>
             <div className={`${t.opacity} ${statusCloseTopHeaderBar === '1' ? closeTopHEaderBar : _TopHEaderBar}`}>
@@ -50,13 +50,13 @@ const TopHeader = (props) => {
                 </select>
 
                 <div>
-                    <a href="#" onClick={() => closeTopHeader('closeTopHEaderBar')}>
+                    <a href="#" onClick={() => dispatch({type: 'CLOSE-TOPBAR', event: 'closeTopHEaderBar'})}>
                         <CloseCircleOutlined style={{ fontSize: '16px', color: '#ff6a6a' }} />
                     </a>
                 </div>
 
             </div>
-            <div className={`${t.contentTriangle} ${statusCloseTopHeaderBar === '1' ? _CloseTopHeaderBar : 'openTopBar'}`} onClick={() => openTopBar('openTopBar')}>
+            <div className={`${t.contentTriangle} ${statusCloseTopHeaderBar === '1' ? _CloseTopHeaderBar : 'openTopBar'}`} onClick={() => dispatch({type: 'OPEN-TOPBAR'} )}>
                 <div className={t.triangle}></div>
             </div>
         </>

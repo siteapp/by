@@ -3,7 +3,6 @@ import h from './Header.module.scss';
 import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
-
 import TopHeader from './TopHeader/TopHeader';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
@@ -15,25 +14,23 @@ const Header = (props) => {
         phone = props.Phone,
         email = props.Email,
         _Language = props._Language,
-        languageChange = props.languageChange,
-        metaTitle = props.metaTitle,
+        dispatch = props.dispatch,
+
         _TopHEaderBar = props._TopHEaderBar,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
-        closeTopHeader = props.closeTopHeader,
-        editPhoneHeader = props.editPhoneHeader,
-        openTopBar = props.openTopBar;
+        languageChange = props.languageChange,
+        metaTitle = props.metaTitle;
 
     return(
         <>
             <Row>
                 <Col>
                     <TopHeader
+                        dispatch = {dispatch}
                         _TopHEaderBar = {_TopHEaderBar}
                         _Language = {_Language}
                         languageChange = {languageChange}
                         _CloseTopHeaderBar = {_CloseTopHeaderBar}
-                        closeTopHeader = {closeTopHeader}
-                        openTopBar = {openTopBar}
                     />
                 </Col>
             </Row>
@@ -56,7 +53,7 @@ const Header = (props) => {
                 </Col>
 
                 <Col span={6} className={h.phones}>
-                    <a className={h.edit} href="#" onClick={() => editPhoneHeader('+375 00 000-00-00')}>Edit (Click, hover)</a>
+                    <a className={h.edit} href="#" onClick={() => dispatch({type: 'EDIT-PHONE', event: '+375 00 000-00-00'})}>Edit (Click, hover)</a>
 
                     <PhoneOutlined />
                     <a className={h.phone} href={`tel:${phone}`}>

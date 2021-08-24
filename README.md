@@ -1,3 +1,3 @@
 # ReaxrJS by Aliaksandr **Kavaliou**
 
-##Editor code reactJs jobs
+#Editor code reactJs jobs

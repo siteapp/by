@@ -93,11 +93,9 @@ class State extends React.Component {
             ]
         };
 
-        this.editPhoneHeader = this.editPhoneHeader.bind(this);
         this.metaTitle = this.metaTitle.bind(this);
-        this.closeTopHeader = this.closeTopHeader.bind(this);
-        this.openTopBar = this.openTopBar.bind(this);
         this.languageChange = this.languageChange.bind(this);
+        this.dispatch = this.dispatch.bind(this);
     }
 
     componentDidMount() {
@@ -135,38 +133,10 @@ class State extends React.Component {
             });*/
     }
 
-    //editor phone
-    editPhoneHeader = event => {
-        this.setState({
-            Phone: event,
-            Email: 'INFO@GMAIL.COM'
-        });
-    }
-
     //MetaTitle edit fn
     metaTitle = (e) => {
         document.title = `${this.state._MetaTitle} | ${e}`;
         localStorage.setItem('page', e)
-    }
-
-    //close TopHeader
-    closeTopHeader = (event) => {
-        this.setState({
-            _TopHEaderBar: event,
-            _CloseTopHeaderBar: 'closeTopBar'
-        });
-
-        localStorage.setItem('closeTopHEaderBar', '1')
-    }
-
-    //delete localStorage closeTopHEaderBar
-    openTopBar = (event) => {
-        this.setState({
-            _TopHEaderBar: 'openTopBarElement',
-            _CloseTopHeaderBar: 'openTopBar'
-        });
-
-        localStorage.removeItem('closeTopHEaderBar');
     }
 
     //change value Language
@@ -177,6 +147,40 @@ class State extends React.Component {
 
         localStorage.setItem('language', event.target.value)
      }
+
+    dispatch(action) {
+        switch (action.type) {
+            case 'EDIT-PHONE':
+                this.setState({
+                    Phone: action.event,
+                    Email: 'INFO@GMAIL.COM'
+                });
+                break;
+            case 'META-TITLE':
+                document.title = `${this.state._MetaTitle} | ${action.e}`;
+                localStorage.setItem('page', action.e)
+
+                break;
+            case 'OPEN-TOPBAR':
+                this.setState({
+                    _TopHEaderBar: 'openTopBarElement',
+                    _CloseTopHeaderBar: 'openTopBar'
+                });
+
+                localStorage.removeItem('closeTopHEaderBar');
+                break;
+            case 'CLOSE-TOPBAR':
+                this.setState({
+                    _TopHEaderBar: action.event,
+                    _CloseTopHeaderBar: 'closeTopBar'
+                });
+
+                localStorage.setItem('closeTopHEaderBar', '1')
+                break;
+            default:
+                console.log( "Нет таких значений" );
+        }
+    }
 
     render(){
         const {
@@ -203,11 +207,9 @@ class State extends React.Component {
                 _Language = {_Language}
                 _TopHEaderBar = {_TopHEaderBar}
                 _CloseTopHeaderBar = {_CloseTopHeaderBar}
-                editPhoneHeader = {this.editPhoneHeader}
+                dispatch = {this.dispatch}
                 metaTitle = {this.metaTitle}
                 languageChange = {this.languageChange}
-                closeTopHeader = {this.closeTopHeader}
-                openTopBar = {this.openTopBar}
             />
         )
     }
