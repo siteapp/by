@@ -1,0 +1,50 @@
+.container{
+  width: 1140px;
+  margin: 0 auto;
+
+  .footerItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .soail{
+      a{
+        margin-right: 0.5rem;
+
+        &:last-child{
+          margin-right: 0rem;
+        }
+        &:hover{
+          img{
+            background: #fff;
+            border-radius: 50%;
+            transition: background 1s ease;
+          }
+        }
+      }
+    }
+    .contacts{
+      .phone{
+        a{
+          color: #ffffff;
+          font-family: 'Comfortaa-Light';
+
+          &:hover{
+            color: #cccccc;
+
+          }
+        }
+      }
+      .email{
+        a{
+          color: #ffffff;
+          font-family: 'Comfortaa-Light';
+
+          &:hover{
+            color: #cccccc;
+          }
+        }
+      }
+    }
+  }
+}

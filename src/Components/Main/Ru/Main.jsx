@@ -7,16 +7,18 @@ const Main = (props) => {
     const [loading, setLoading] = useState(false),
         About = props.About,
         _MetaTitle = props._MetaTitle,
+        _Theme = props._Theme,
         _Logo = props._Logo;
 
     useEffect(() => {
         setLoading(true);
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1500);
+        }, _Theme[0].LoadingContent);
         // Cancel the timer while unmounting
         return () => clearTimeout(timer);
     }, []);
+
 
     return(
         <div>
@@ -34,6 +36,49 @@ const Main = (props) => {
                                     <Skeleton circle={true} height={150} width={150} style={{ marginRight: 20 }}/>
                                     <Skeleton height={450} width={`63%`} style={{ marginRight: 20 }}/>
                                     <Skeleton height={335} width={170}/>
+                                </div>
+
+                                <h2>
+                                    <Skeleton height={40} width={150} style={{margin: '0 auto', display: 'block', textAlign: 'center', marginTop: 25}}/>
+                                </h2>
+
+                                <div className={m.skelets}>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
+                                    <div className={m.skelet}>
+                                        <Skeleton height={60} width={260} />
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -67,6 +112,78 @@ const Main = (props) => {
                                     </div>
                                 </div>
                                 <img src={window.location.origin + '/images/mobile.svg'} alt="computer"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={m.portfolioClients}>
+                        <h2>
+                            <span>Где работал...</span>
+                        </h2>
+
+                        <div className={m.items}>
+                            <div className={m.item}>
+                                <a href="https://beautyhub.pro/" target="_blank" rel="nofollow">
+                                    Beautyhub.pro
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://mega-light.by/" target="_blank" rel="nofollow">
+                                    Mega-light.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://baking-stone.ru/" target="_blank" rel="nofollow">
+                                    Baking-stone.ru
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://puzirek.by/" target="_blank" rel="nofollow">
+                                    Puzirek.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://petsfood.by/" target="_blank" rel="nofollow">
+                                    Petsfood.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://tepleya.by/" target="_blank" rel="nofollow">
+                                    Tepleya.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://www.mx.by/" target="_blank" rel="nofollow">
+                                    Mx.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://loftmedia.by/" target="_blank" rel="nofollow">
+                                    Loftmedia.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://ledexlamp.ru/" target="_blank" rel="nofollow">
+                                    Ledexlamp.ru
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="https://thesushi.by/" target="_blank" rel="nofollow">
+                                    Thesushi.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="http://lovelace.by/" target="_blank" rel="nofollow">
+                                    Lovelace.by
+                                </a>
+                            </div>
+                            <div className={m.item}>
+                                <a href="#" rel="nofollow">
+                                    ....
+                                </a>
+                                <div className={m.subclients}>
+                                    <span>Много сделано сайтов, даже не вспомнить....</span>
+                                </div>
                             </div>
                         </div>
                     </div>

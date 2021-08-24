@@ -72,3 +72,89 @@
     }
   }
 }
+
+.portfolioClients{
+  margin-bottom: 2rem;
+
+  h2{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Comfortaa-Regular';
+    text-align: center;
+  }
+
+  .items{
+    column-count: 4;
+    text-align: center;
+
+    .item{
+      background-color: #cccccc38;
+      border: 1px solid #cccccc00;
+      border-radius: 10px;
+      margin: 0.5rem;
+
+      &:first-child{
+        margin: 0 0.5rem;
+      }
+
+      &:hover{
+        border-radius: 5px;
+        background: linear-gradient(90deg, #772088, #4854a2);
+        border: 1px solid #ccc;
+        transition: background 0.2s ease;
+
+        a{
+          color: #ffffff;
+        }
+
+        &:last-child{
+          .subclients{
+            display: block;
+            position: absolute;
+            background: linear-gradient(90deg, #4854a2, #772088);
+            padding: 1em;
+            margin-left: -50px;
+            border-radius: 10px;
+            margin-top: 20px;
+
+            span{
+              color: #ffffff;
+              font-family: 'Comfortaa-Regular';
+            }
+          }
+          &:after{
+            content: '';
+            position: absolute;
+            margin-top: 55px;
+            margin-left: 70px;
+            border: 10px solid transparent;
+            border-top: 17px solid #56469b;
+          }
+        }
+      }
+
+      a{
+        font-family: 'gunnyrewritten';
+        font-size: 35px;
+        color: #5d3d97;
+      }
+
+      .subclients{
+        display: none;
+      }
+    }
+  }
+}
+
+.skelets{
+  column-count: 4;
+
+  .skelet{
+    margin: 0.5rem;
+
+    &:first-child{
+      margin: 0 0.5rem;
+    }
+  }
+}

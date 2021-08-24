@@ -85,11 +85,12 @@ const App = (props) => {
                             </Switch>
                         </>
                     </div>
-                    <div>
-                        <Footer
-                            Menu = {Menu}
-                        />
-                    </div>
+
+                </div>
+                <div className={a.background}>
+                    <Footer
+                        Menu = {Menu}
+                    />
                 </div>
             </Router>
         </>
