@@ -5,10 +5,10 @@ import 'antd/dist/antd.css';
 import {
     NavLink
 } from "react-router-dom";
+import {metaTitle} from "../../../Store";
 
 const Menu = (props) => {
-    let menu = props.menu,
-        metaTitle = props.metaTitle;
+    let menu = props.menu;
 
     return(
         <>

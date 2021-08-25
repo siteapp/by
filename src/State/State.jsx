@@ -162,6 +162,7 @@ class State extends React.Component {
 
                 break;
             case 'OPEN-TOPBAR':
+                console.log('OPEN-TOPBAR')
                 this.setState({
                     _TopHEaderBar: 'openTopBarElement',
                     _CloseTopHeaderBar: 'openTopBar'
@@ -170,6 +171,7 @@ class State extends React.Component {
                 localStorage.removeItem('closeTopHEaderBar');
                 break;
             case 'CLOSE-TOPBAR':
+                console.log('CLOSE-TOPBAR')
                 this.setState({
                     _TopHEaderBar: action.event,
                     _CloseTopHeaderBar: 'closeTopBar'

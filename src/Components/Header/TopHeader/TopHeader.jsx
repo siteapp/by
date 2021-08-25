@@ -1,12 +1,13 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 import t from './TopHeader.module.scss';
 import 'antd/dist/antd.css';
 import { AntDesignOutlined, Html5Outlined, BorderlessTableOutlined, CloseCircleOutlined } from '@ant-design/icons';
+import {closeTopBarActionCreator, openTopBarActionCreator, languageChange} from "../../../Store";
 
 const TopHeader = (props) => {
     let _TopHEaderBar = props._TopHEaderBar,
         _Language = props._Language,
-        languageChange = props.languageChange,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
         statusCloseTopHeaderBar = localStorage.getItem('closeTopHEaderBar'),
         closeTopHEaderBar = 'closeTopHEaderBar',
@@ -50,13 +51,13 @@ const TopHeader = (props) => {
                 </select>
 
                 <div>
-                    <a href="#" onClick={() => dispatch({type: 'CLOSE-TOPBAR', event: 'closeTopHEaderBar'})}>
+                    <a href="#" onClick={() => closeTopBarActionCreator('closeTopHEaderBar')}>
                         <CloseCircleOutlined style={{ fontSize: '16px', color: '#ff6a6a' }} />
                     </a>
                 </div>
 
             </div>
-            <div className={`${t.contentTriangle} ${statusCloseTopHeaderBar === '1' ? _CloseTopHeaderBar : 'openTopBar'}`} onClick={() => dispatch({type: 'OPEN-TOPBAR'} )}>
+            <div className={`${t.contentTriangle} ${statusCloseTopHeaderBar === '1' ? _CloseTopHeaderBar : 'openTopBar'}`} onClick={() => openTopBarActionCreator()}>
                 <div className={t.triangle}></div>
             </div>
         </>

@@ -5,8 +5,6 @@ import { Row, Col, Divider } from 'antd';
 import a from "../../App.module.scss";
 
 const Footer = (props) => {
-    console.log(props)
-
     return(
         <div className={f.container}>
             <div className={f.footerItem}>

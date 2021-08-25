@@ -6,6 +6,7 @@ import { PhoneOutlined } from '@ant-design/icons';
 import TopHeader from './TopHeader/TopHeader';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
+import {editPhone} from "../../Store";
 
 
 const Header = (props) => {
@@ -53,7 +54,7 @@ const Header = (props) => {
                 </Col>
 
                 <Col span={6} className={h.phones}>
-                    <a className={h.edit} href="#" onClick={() => dispatch({type: 'EDIT-PHONE', event: '+375 00 000-00-00'})}>Edit (Click, hover)</a>
+                    <a className={h.edit} href="#" onClick={() => editPhone({type: 'EDIT-PHONE', event: '+375 00 000-00-00'})}>Edit (Click, hover)</a>
 
                     <PhoneOutlined />
                     <a className={h.phone} href={`tel:${phone}`}>
