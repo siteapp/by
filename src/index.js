@@ -5,7 +5,6 @@ import {renderState} from './Redux/Store';
 import store from './Redux/Redux';
 import App from "./App";
 import * as serviceWorker from './serviceWorker';
-import dispatch from './Redux/Store';
 
 let renderEntireTree = (store) => {
     localStorage.getItem('language') !== null ?
@@ -14,7 +13,6 @@ let renderEntireTree = (store) => {
             :
             store.TextSiteStore._Language = 'en'
         :
-
         console.log('Error index.js')
     ;
 
@@ -22,7 +20,6 @@ let renderEntireTree = (store) => {
         <React.StrictMode>
             <App
                 store = {store}
-                dispatch = {dispatch.dispatch.bind(store)}
             />
         </React.StrictMode>,
         document.getElementById('root')
@@ -38,7 +35,3 @@ renderState(renderEntireTree);
 });*/
 
 serviceWorker.unregister();
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();

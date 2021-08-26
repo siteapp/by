@@ -11,8 +11,7 @@ const TopHeader = (props) => {
         _Language = props._Language,
         _CloseTopHeaderBar = props._CloseTopHeaderBar,
         statusCloseTopHeaderBar = localStorage.getItem('closeTopHEaderBar'),
-        closeTopHEaderBar = 'closeTopHEaderBar',
-        dispatch = props.dispatch;
+        closeTopHEaderBar = 'closeTopHEaderBar';
 
     return(
         <>

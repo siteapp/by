@@ -11,8 +11,6 @@ import {
 import {languageChange, metaTitle} from "./Redux/Store";
 
 const App = (props) => {
-    //debugger
-
     return(
         <>
             <Router>
@@ -27,8 +25,6 @@ const App = (props) => {
                                 _Language = {props.store.TextSiteStore._Language}
                                 _TopHEaderBar = {props.store.TextSiteStore._TopHEaderBar}
                                 _CloseTopHeaderBar = {props.store.TextSiteStore._CloseTopHeaderBar}
-                                dispatch = {props.dispatch}
-
                                 languageChange = {languageChange}
                                 metaTitle = {metaTitle}
                             />
