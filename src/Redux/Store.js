@@ -12,9 +12,7 @@ import languageReducer from "./Language-reducer";
 import aboutReducer from "./About-reducer";
 import closeTopBarActionCreatorReduce from "./closeTopBarActionCreator-reducer";
 
-let renderEntireTree = () => {
-
-}
+let renderEntireTree = () => {}
 
 const store = {
     _About: {en: [
