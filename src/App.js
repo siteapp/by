@@ -8,90 +8,81 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import {languageChange, metaTitle} from "./Redux/Store";
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    componentDidMount() {}
+const App = (props) => {
+    //debugger
 
-    render() {
-        //save page name | MetaTitle
-        localStorage.getItem('page') === null ? document.title = `${this.props.store._state._MetaTitle} | Home` : document.title = `${this.props.store._state._MetaTitle} | ${localStorage.getItem('page')}`;
-    console.log(this.props.store)
-        return(
-            <>
-                <Router>
-                    <div className={a.background}>
-                        <div className={a.container}>
-                            <div>
-                                <Header
-                                    Menu = {this.props.store._state.Menu}
-                                    Logo = {this.props.store._state._Logo}
-                                    Phone = {this.props.store._state.Phone}
-                                    Email = {this.props.store._state.Email}
-                                    _Language = {this.props.store._state._Language}
-                                    _TopHEaderBar = {this.props.store._state._TopHEaderBar}
-                                    _CloseTopHeaderBar = {this.props.store._state._CloseTopHeaderBar}
-                                    dispatch = {this.props.store.dispatch}
-
-                                    languageChange = {this.props.store._state.languageChange}
-                                    metaTitle = {this.props.store._state.metaTitle}
-                                />
-                            </div>
-                        </div>
-                    </div>
+    return(
+        <>
+            <Router>
+                <div className={a.background}>
                     <div className={a.container}>
                         <div>
-                            <>
-                                <Switch>
-                                    {localStorage.getItem('language') !== null ?
-                                        localStorage.getItem('language') === 'ru' ?
-                                            this.props.store._state.Menu.map((route, index) => (
-                                                <Route
-                                                    key={index}
-                                                    path={route.path}
-                                                    exact={route.exact}
-                                                    children={<route.mainRu />}
-                                                />
-                                            ))
-                                            :
-                                            this.props.store._state.Menu.map((route, index) => (
-                                                <Route
-                                                    key={index}
-                                                    path={route.path}
-                                                    exact={route.exact}
-                                                    children={<route.mainEn />}
-                                                />
-                                            ))
-                                        :
-                                        this.props.store._state.Menu.map((route, index) => (
+                            <Header
+                                Menu = {props.store.Menu.Menu}
+                                Logo = {props.store.TextSiteStore._Logo}
+                                Phone = {props.store.Contacts.Phone}
+                                Email = {props.store.Contacts.Email}
+                                _Language = {props.store.TextSiteStore._Language}
+                                _TopHEaderBar = {props.store.TextSiteStore._TopHEaderBar}
+                                _CloseTopHeaderBar = {props.store.TextSiteStore._CloseTopHeaderBar}
+                                dispatch = {props.dispatch}
+
+                                languageChange = {languageChange}
+                                metaTitle = {metaTitle}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className={a.container}>
+                    <div>
+                        <>
+                            <Switch>
+                                {localStorage.getItem('language') !== null ?
+                                    localStorage.getItem('language') === 'ru' ?
+                                        props.store.Menu.Menu.map((route, index) => (
                                             <Route
                                                 key={index}
                                                 path={route.path}
                                                 exact={route.exact}
-                                                children={<route.mainEn/>}
+                                                children={<route.mainRu />}
                                             />
                                         ))
-                                    }
+                                        :
+                                        props.store.Menu.Menu.map((route, index) => (
+                                            <Route
+                                                key={index}
+                                                path={route.path}
+                                                exact={route.exact}
+                                                children={<route.mainEn />}
+                                            />
+                                        ))
+                                    :
+                                    props.store.Menu.Menu.map((route, index) => (
+                                        <Route
+                                            key={index}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            children={<route.mainEn/>}
+                                        />
+                                    ))
+                                }
 
-                                </Switch>
-                            </>
-                        </div>
-
+                            </Switch>
+                        </>
                     </div>
-                    <div className={a.background}>
-                        <Footer
-                            Menu = {this.props.store._state.Menu}
-                        />
-                    </div>
-                </Router>
-            </>
 
-        )
-    }
+                </div>
+                <div className={a.background}>
+                    <Footer
+                        Menu = {props.store.Menu.Menu}
+                    />
+                </div>
+            </Router>
+        </>
 
+    )
 }
 
 export default App;

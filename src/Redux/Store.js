@@ -9,30 +9,32 @@ import ContactsRu from "../Components/Page/Contacts/Ru/Contacts";
 import Logo from "../logo.png";
 import phoneReducer from "./Phone-reducer";
 import languageReducer from "./Language-reducer";
+import aboutReducer from "./About-reducer";
+import closeTopBarActionCreatorReduce from "./closeTopBarActionCreator-reducer";
 
 let renderEntireTree = () => {
-    console.log('SaveChange')
+
 }
 
 const store = {
-    _state:{
-        _About: {en: [
-                {'id': 1, 'title': 'Technologies:', 'description': 'Ant Design, HTML5, CSS3, Sass/SCSS, JavaScript'},
-                {'id': 2, 'title': 'Frameworks and Libraries:', 'description': 'React.js, JQuery, Bootstrap 4, Materialize, SASS, Less'},
-                {'id': 3, 'title': 'Background knowledge:', 'description': 'PHP(Smarty), MySQLi, PHP(Twig), GraphlQL'},
-                {'id': 4, 'title': 'Operating Systems:', 'description': 'Windows, Linux'},
-                {'id': 5, 'title': 'Development Environment and Tools:', 'description': 'IntelliJ IDEA, Chrome DevTools, Firefox Firebug, WebStorm, Visual Studio Code, ATOM'},
-                {'id': 6, 'title': 'Source Control:', 'description': 'Git'},
-                {'id': 7, 'title': 'Package Managers:', 'description': 'npm, gulp'}
-            ], ru: [
-                {'id': 1, 'title': 'Технологии:', 'description': 'Ant Design, HTML5, CSS3, Sass/SCSS, JavaScript'},
-                {'id': 2, 'title': 'Фреймворк и библиотеки:', 'description': 'React.js, JQuery, Bootstrap 4, Materialize, SASS, Less'},
-                {'id': 3, 'title': 'Бэкенд:', 'description': 'PHP(Smarty), MySQLi, PHP(Twig), GraphlQL'},
-                {'id': 4, 'title': 'Операционные системы:', 'description': 'Windows, Linux'},
-                {'id': 5, 'title': 'Среда разработки и инструменты:', 'description': 'IntelliJ IDEA, Chrome DevTools, Firefox Firebug, WebStorm, Visual Studio Code, ATOM'},
-                {'id': 6, 'title': 'Контроль:', 'description': 'Git'},
-                {'id': 7, 'title': 'Менеджеры пакетов:', 'description': 'npm, gulp'}
-            ]},
+    _About: {en: [
+            {'id': 1, 'title': 'Technologies:', 'description': 'Ant Design, HTML5, CSS3, Sass/SCSS, JavaScript'},
+            {'id': 2, 'title': 'Frameworks and Libraries:', 'description': 'React.js, JQuery, Bootstrap 4, Materialize, SASS, Less'},
+            {'id': 3, 'title': 'Background knowledge:', 'description': 'PHP(Smarty), MySQLi, PHP(Twig), GraphlQL'},
+            {'id': 4, 'title': 'Operating Systems:', 'description': 'Windows, Linux'},
+            {'id': 5, 'title': 'Development Environment and Tools:', 'description': 'IntelliJ IDEA, Chrome DevTools, Firefox Firebug, WebStorm, Visual Studio Code, ATOM'},
+            {'id': 6, 'title': 'Source Control:', 'description': 'Git'},
+            {'id': 7, 'title': 'Package Managers:', 'description': 'npm, gulp'}
+        ], ru: [
+            {'id': 1, 'title': 'Технологии:', 'description': 'Ant Design, HTML5, CSS3, Sass/SCSS, JavaScript'},
+            {'id': 2, 'title': 'Фреймворк и библиотеки:', 'description': 'React.js, JQuery, Bootstrap 4, Materialize, SASS, Less'},
+            {'id': 3, 'title': 'Бэкенд:', 'description': 'PHP(Smarty), MySQLi, PHP(Twig), GraphlQL'},
+            {'id': 4, 'title': 'Операционные системы:', 'description': 'Windows, Linux'},
+            {'id': 5, 'title': 'Среда разработки и инструменты:', 'description': 'IntelliJ IDEA, Chrome DevTools, Firefox Firebug, WebStorm, Visual Studio Code, ATOM'},
+            {'id': 6, 'title': 'Контроль:', 'description': 'Git'},
+            {'id': 7, 'title': 'Менеджеры пакетов:', 'description': 'npm, gulp'}
+        ]},
+    Menu: {
         Menu:[
             {
                 path: "/",
@@ -40,16 +42,16 @@ const store = {
                 titleEn: () => 'Home',
                 titleRu: () => 'Главная',
                 mainEn: () => <MainEn
-                    About = {store._state._About}
-                    _MetaTitle = {store._state._MetaTitle}
-                    _Logo = {store._state._Logo}
-                    _Theme = {store._state._Theme}
+                    About = {store._About}
+                    _MetaTitle = {store.TextSiteStore._MetaTitle}
+                    _Logo = {store.TextSiteStore._Logo}
+                    _Theme = {store.TextSiteStore._Theme}
                 />,
                 mainRu: () => <MainRu
-                    About = {store._state._About}
-                    _MetaTitle = {store._state._MetaTitle}
-                    _Logo = {store._state._Logo}
-                    _Theme = {store._state._Theme}
+                    About = {store._About}
+                    _MetaTitle = {store.TextSiteStore._MetaTitle}
+                    _Logo = {store.TextSiteStore._Logo}
+                    _Theme = {store.TextSiteStore._Theme}
                 />
 
             },
@@ -78,14 +80,18 @@ const store = {
                 mainEn: () => <ContactsEn />,
                 mainRu: () => <ContactsRu />
             }
-        ],
-        _Logo: Logo,
+        ]
+    },
+    Contacts:{
         Phone: '+375(33)640-98-68',
         Email: 'ALIAKSANDR.KOVALIOU@GMAIL.COM',
-        _MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou',
+    },
+    TextSiteStore:{
+        _MetaTitle: '🎉 ᐅ Александр Ковалёв',
+        _Language: 'ru',
+        _Logo: Logo,
         _TopHEaderBar: 'open',
         _CloseTopHeaderBar: 'closeTopBar',
-        _Language: 'en',
         _Theme:[
             {'LoadingContent': 1000}
         ],
@@ -96,6 +102,8 @@ const store = {
         switch (action.type) {
             case 'EDIT-PHONE':
                 phoneReducer(store, action)
+                store.Contacts.Phone = action.event;
+                store.Contacts.Email = 'INFO@GMAIL.COM'
                 break;
             case 'META-TITLE':
                 document.title = `${this.state._MetaTitle} | ${action.e}`;
@@ -107,29 +115,20 @@ const store = {
                 localStorage.removeItem('closeTopHEaderBar');
                 break;
             case 'CLOSE-TOPBAR':
-                store._TopHEaderBar = action.event
-                store._CloseTopHeaderBar = 'closeTopBar'
-                localStorage.setItem('closeTopHEaderBar', '1')
+                closeTopBarActionCreatorReduce(store,action)
                 break;
             case 'LANGUAGE':
                 languageReducer(store, action)
+                break;
+            case 'ABOUT':
+                aboutReducer(store, action)
                 break;
             default:
                 console.log( "Нет таких значений" );
         }
     },
     getState(){
-        return this._state;
-    },
-    localStorange() {
-        localStorage.getItem('language') !== null ?
-            localStorage.getItem('language') === 'ru' ?
-                store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Александр Ковалёв', Language: 'ru'})
-                :
-                store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou', Language: 'en'})
-            :
-            console.log('start react app')
-        ;
+        return this.store;
     }
 }
 
@@ -145,20 +144,35 @@ export const closeTopBarActionCreator = (event) => {
         })
     },
     metaTitle = (e) => {
-        document.title = `${store._MetaTitle} | ${e}`;
+        document.title = `${store.TextSiteStore._MetaTitle} | ${e}`;
         localStorage.setItem('page', e)
     },
     languageChange = (event) => {
-        store.dispatch({type: 'LANGUAGE', Language: event.target.value})
-        //debugger
+        localStorage.getItem('language') === 'ru' ?
+            store.dispatch(
+                {type: 'LANGUAGE', Language: event.target.value, MetaTitle: '🎉 ᐅ Александр Ковалёв'}
+            )
+            :
+            store.dispatch(
+                {type: 'LANGUAGE', Language: event.target.value, MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou'}
+            )
+        ;
     },
     editPhone = (event) => {
-        store.dispatch({type: 'EDIT-PHONE', event: event})
+        store.dispatch({type: 'EDIT-PHONE', event: event.event})
     },
     renderState = (observer) => {
         renderEntireTree = observer;
+        localStorageState();
+    },
+    localStorageState = () => {
+        localStorage.getItem('page') === null ?
+            document.title = `🎉 ᐅ Aliaksandr Kavaliou | Home`
+            :
+            document.title = `${store.TextSiteStore._MetaTitle} | ${localStorage.getItem('page')}`
+        ;
     }
 
-store.localStorange()
+
 export default store;
 window.store = store;

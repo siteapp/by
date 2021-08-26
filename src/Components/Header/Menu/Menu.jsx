@@ -1,7 +1,6 @@
 import React from 'react';
 import i from './Menu.module.scss';
 import 'antd/dist/antd.css';
-
 import {
     NavLink
 } from "react-router-dom";
