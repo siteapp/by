@@ -18,8 +18,8 @@ class App extends React.Component {
 
     render() {
         //save page name | MetaTitle
-        localStorage.getItem('page') === null ? document.title = `${this.props.store._MetaTitle} | Home` : document.title = `${this.props.store._MetaTitle} | ${localStorage.getItem('page')}`;
-
+        localStorage.getItem('page') === null ? document.title = `${this.props.store._state._MetaTitle} | Home` : document.title = `${this.props.store._state._MetaTitle} | ${localStorage.getItem('page')}`;
+    console.log(this.props.store)
         return(
             <>
                 <Router>
@@ -27,17 +27,17 @@ class App extends React.Component {
                         <div className={a.container}>
                             <div>
                                 <Header
-                                    Menu = {this.props.store.Menu}
-                                    Logo = {this.props.store._Logo}
-                                    Phone = {this.props.store.Phone}
-                                    Email = {this.props.store.Email}
-                                    _Language = {this.props.store._Language}
-                                    _TopHEaderBar = {this.props.store._TopHEaderBar}
-                                    _CloseTopHeaderBar = {this.props.store._CloseTopHeaderBar}
+                                    Menu = {this.props.store._state.Menu}
+                                    Logo = {this.props.store._state._Logo}
+                                    Phone = {this.props.store._state.Phone}
+                                    Email = {this.props.store._state.Email}
+                                    _Language = {this.props.store._state._Language}
+                                    _TopHEaderBar = {this.props.store._state._TopHEaderBar}
+                                    _CloseTopHeaderBar = {this.props.store._state._CloseTopHeaderBar}
                                     dispatch = {this.props.store.dispatch}
 
-                                    languageChange = {this.props.store.languageChange}
-                                    metaTitle = {this.props.store.metaTitle}
+                                    languageChange = {this.props.store._state.languageChange}
+                                    metaTitle = {this.props.store._state.metaTitle}
                                 />
                             </div>
                         </div>
@@ -48,7 +48,7 @@ class App extends React.Component {
                                 <Switch>
                                     {localStorage.getItem('language') !== null ?
                                         localStorage.getItem('language') === 'ru' ?
-                                            this.props.store.Menu.map((route, index) => (
+                                            this.props.store._state.Menu.map((route, index) => (
                                                 <Route
                                                     key={index}
                                                     path={route.path}
@@ -57,7 +57,7 @@ class App extends React.Component {
                                                 />
                                             ))
                                             :
-                                            this.props.store.Menu.map((route, index) => (
+                                            this.props.store._state.Menu.map((route, index) => (
                                                 <Route
                                                     key={index}
                                                     path={route.path}
@@ -66,7 +66,7 @@ class App extends React.Component {
                                                 />
                                             ))
                                         :
-                                        this.props.store.Menu.map((route, index) => (
+                                        this.props.store._state.Menu.map((route, index) => (
                                             <Route
                                                 key={index}
                                                 path={route.path}
@@ -83,7 +83,7 @@ class App extends React.Component {
                     </div>
                     <div className={a.background}>
                         <Footer
-                            Menu = {this.props.store.Menu}
+                            Menu = {this.props.store._state.Menu}
                         />
                     </div>
                 </Router>

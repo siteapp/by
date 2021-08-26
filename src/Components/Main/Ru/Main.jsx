@@ -19,7 +19,6 @@ const Main = (props) => {
         return () => clearTimeout(timer);
     }, []);
 
-
     return(
         <div>
             {loading &&
