@@ -171,6 +171,5 @@ export const closeTopBarActionCreator = (event) => {
         ;
     }
 
-
 export default store;
 window.store = store;
