@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import t from './TopHeader.module.scss';
 import 'antd/dist/antd.css';
 import { AntDesignOutlined, Html5Outlined, BorderlessTableOutlined, CloseCircleOutlined } from '@ant-design/icons';
-import {closeTopBarActionCreator, openTopBarActionCreator, languageChange} from "../../../Store";
+import {closeTopBarActionCreator, openTopBarActionCreator, languageChange} from "../../../Redux/Store";
 
 const TopHeader = (props) => {
     let _TopHEaderBar = props._TopHEaderBar,

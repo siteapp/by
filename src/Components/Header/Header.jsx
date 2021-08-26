@@ -6,7 +6,7 @@ import { PhoneOutlined } from '@ant-design/icons';
 import TopHeader from './TopHeader/TopHeader';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
-import {editPhone} from "../../Store";
+import {editPhone} from "../../Redux/Store";
 
 
 const Header = (props) => {

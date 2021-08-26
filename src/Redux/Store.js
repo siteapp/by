@@ -1,12 +1,14 @@
-import MainEn from "./Components/Main/En/Main";
-import MainRu from "./Components/Main/Ru/Main";
-import AboutEn from "./Components/Page/About/En/About";
-import AboutRu from "./Components/Page/About/Ru/About";
-import DevelopenEn from "./Components/Page/Developen/En/Developen";
-import DevelopenRu from "./Components/Page/Developen/Ru/Developen";
-import ContactsEn from "./Components/Page/Contacts/En/Contacts";
-import ContactsRu from "./Components/Page/Contacts/Ru/Contacts";
-import Logo from "./logo.png";
+import MainEn from "../Components/Main/En/Main";
+import MainRu from "../Components/Main/Ru/Main";
+import AboutEn from "../Components/Page/About/En/About";
+import AboutRu from "../Components/Page/About/Ru/About";
+import DevelopenEn from "../Components/Page/Developen/En/Developen";
+import DevelopenRu from "../Components/Page/Developen/Ru/Developen";
+import ContactsEn from "../Components/Page/Contacts/En/Contacts";
+import ContactsRu from "../Components/Page/Contacts/Ru/Contacts";
+import Logo from "../logo.png";
+import phoneReducer from "./Phone-reducer";
+import languageReducer from "./Language-reducer";
 
 let renderEntireTree = () => {
     console.log('SaveChange')
@@ -87,43 +89,28 @@ const Store = {
         {'LoadingContent': 1000}
     ],
     dispatch(action) {
+        renderEntireTree(Store)
+
         switch (action.type) {
             case 'EDIT-PHONE':
-                Store.Phone = action.event.event
-                Store.Email = 'INFO@GMAIL.COM'
-                renderEntireTree(Store)
+                phoneReducer(Store, action)
                 break;
             case 'META-TITLE':
                 document.title = `${this.state._MetaTitle} | ${action.e}`;
                 localStorage.setItem('page', action.e)
-                renderEntireTree(Store)
                 break;
             case 'OPEN-TOPBAR':
                 Store._TopHEaderBar = 'openTopBarElement'
                 Store._CloseTopHeaderBar = 'openTopBar'
                 localStorage.removeItem('closeTopHEaderBar');
-                renderEntireTree(Store)
                 break;
             case 'CLOSE-TOPBAR':
                 Store._TopHEaderBar = action.event
                 Store._CloseTopHeaderBar = 'closeTopBar'
                 localStorage.setItem('closeTopHEaderBar', '1')
-                renderEntireTree(Store)
                 break;
             case 'LANGUAGE':
-                Store._Language = action.Language
-                localStorage.setItem('language', action.Language)
-
-                localStorage.getItem('language') !== null ?
-                    localStorage.getItem('language') === 'ru' ?
-                        Store._MetaTitle = '🎉 ᐅ Александр Ковалёв'
-                        :
-                        Store._MetaTitle = '🎉 ᐅ Aliaksandr Kavaliou'
-                    :
-                    console.log('start react app')
-                ;
-
-                renderEntireTree(Store)
+                languageReducer(Store, action)
                 break;
             default:
                 console.log( "Нет таких значений" );
@@ -155,15 +142,17 @@ export const closeTopBarActionCreator = (event) => {
     },
     renderState = (observer) => {
         renderEntireTree = observer;
-        localStorage.getItem('language') !== null ?
-            localStorage.getItem('language') === 'ru' ?
-                Store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Александр Ковалёв', Language: 'ru'})
-                :
-                Store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou', Language: 'en'})
-            :
-            console.log('start react app')
-        ;
     }
-
+const localStorange = () => {
+    localStorage.getItem('language') !== null ?
+        localStorage.getItem('language') === 'ru' ?
+            Store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Александр Ковалёв', Language: 'ru'})
+            :
+            Store.dispatch({type: 'LANGUAGE', MetaTitle: '🎉 ᐅ Aliaksandr Kavaliou', Language: 'en'})
+        :
+        console.log('start react app')
+    ;
+}
+localStorange()
 export default Store;
 window.store = Store;

@@ -5,7 +5,7 @@ import 'antd/dist/antd.css';
 import {
     NavLink
 } from "react-router-dom";
-import {metaTitle} from "../../../Store";
+import {metaTitle} from "../../../Redux/Store";
 
 const Menu = (props) => {
     let menu = props.menu;

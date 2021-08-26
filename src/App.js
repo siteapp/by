@@ -8,16 +8,13 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import {renderState} from "./Store";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
-    componentDidMount() {
-
-    }
+    componentDidMount() {}
 
     render() {
         //save page name | MetaTitle
