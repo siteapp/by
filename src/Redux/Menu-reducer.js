@@ -6,7 +6,6 @@ import DevelopenEn from "../Components/Page/Developen/En/Developen";
 import DevelopenRu from "../Components/Page/Developen/Ru/Developen";
 import ContactsEn from "../Components/Page/Contacts/En/Contacts";
 import ContactsRu from "../Components/Page/Contacts/Ru/Contacts";
-
 import Logo from "../logo.png";
 
 let initialState = {
