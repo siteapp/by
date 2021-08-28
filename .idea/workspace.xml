@@ -20,13 +20,18 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="">
+    <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="UPDATE: REDUX fixed 26/08/2021">
+      <change afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="328f15b8d63b5435c5e27a67f746432f5f9dc5d8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ATOM_FTP" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -126,6 +131,7 @@
       <workItem from="1629868751475" duration="13392000" />
       <workItem from="1629894353582" duration="9000" />
       <workItem from="1629956525897" duration="34912000" />
+      <workItem from="1630042094935" duration="5618000" />
     </task>
     <task id="LOCAL-00001" summary="TestDriveGitHub">
       <created>1628689506834</created>
@@ -239,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630010248244</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="UPDATE: REDUX fixed 26/08/2021">
+      <created>1630011546800</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1630011546800</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +279,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -277,6 +290,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TestDriveGitHub" />
@@ -304,6 +318,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="829" y="430" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1629873806143" />
+    <state x="586" y="198" key="#Inspections" timestamp="1630011606304">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1630011606304" />
     <state x="845" y="382" key="#Notifications" timestamp="1630010211791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -312,34 +330,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629301008090" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1630010244129">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1630011542533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1630010244129" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1630011542533" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1630010386861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630010386861" />
-    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1629894361379">
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1630051057393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1629894361379" />
-    <state width="1899" height="107" key="GridCell.Tab.0.bottom" timestamp="1630009959462">
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630051057393" />
+    <state width="1899" height="107" key="GridCell.Tab.0.bottom" timestamp="1630051059874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630009959462" />
-    <state width="1899" height="107" key="GridCell.Tab.0.center" timestamp="1630009959462">
+    <state width="1899" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630051059874" />
+    <state width="1899" height="107" key="GridCell.Tab.0.center" timestamp="1630051059873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="107" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630009959462" />
-    <state width="1899" height="107" key="GridCell.Tab.0.left" timestamp="1630009959462">
+    <state width="1899" height="107" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630051059873" />
+    <state width="1899" height="107" key="GridCell.Tab.0.left" timestamp="1630051059873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="107" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630009959462" />
-    <state width="1899" height="107" key="GridCell.Tab.0.right" timestamp="1630009959462">
+    <state width="1899" height="107" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630051059873" />
+    <state width="1899" height="107" key="GridCell.Tab.0.right" timestamp="1630051059874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="107" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630009959462" />
+    <state width="1899" height="107" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630051059874" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1628689398042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -348,10 +366,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1629987536754" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1630010435665">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1630011549076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1630010435665" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1630011549076" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629980054298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -376,5 +394,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="774" y="363" key="git4idea.ui.GitTagDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630010158297" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1630046960071">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630046960071" />
   </component>
 </project>

@@ -5,6 +5,7 @@ import {renderState} from './Redux/Store';
 import store from './Redux/Redux';
 import App from "./App";
 import * as serviceWorker from './serviceWorker';
+import StoreContext, {Provider} from "./StoreContext";
 
 let renderEntireTree = (store) => {
     localStorage.getItem('language') !== null ?
@@ -18,9 +19,9 @@ let renderEntireTree = (store) => {
 
     ReactDOM.render(
         <React.StrictMode>
-            <App
-                store = {store}
-            />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </React.StrictMode>,
         document.getElementById('root')
     );

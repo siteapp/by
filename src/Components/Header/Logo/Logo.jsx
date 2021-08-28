@@ -2,8 +2,9 @@ import React from 'react';
 import l from './Logo.module.scss';
 import 'antd/dist/antd.css';
 import Typical from 'react-typical';
+import StoreContext from "../../../StoreContext";
 
-const LogoType = (props) => {
+const LogoType = () => {
     let name = 'Aliaksandr',
         slogan = 'Kavaliou';
 
@@ -17,19 +18,21 @@ const LogoType = (props) => {
 }
 
 const Logo = (props) => {
-    let logo = props.logo,
-        name = 'Aliaksandr',
-        slogan = 'Kavaliou';
+    let slogan = 'Kavaliou';
 
     return(
         <div>
-            <a href="/" className={l.logo}>
-                <img src={logo} alt="logo"/>
-                <span className={l.title}>
-                    <span><LogoType /></span>
-                    <span className={l.slogan}> {slogan}</span>
-                </span>
-            </a>
+            <StoreContext.Consumer>
+                { store => (
+                    <a href="/" className={l.logo}>
+                        <img src={store.TextSiteStore._Logo} alt="logo"/>
+                        <span className={l.title}>
+                            <span><LogoType /></span>
+                            <span className={l.slogan}> {slogan}</span>
+                        </span>
+                    </a>
+                )}
+            </StoreContext.Consumer>
         </div>
     )
 }

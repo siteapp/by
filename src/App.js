@@ -8,76 +8,71 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import {languageChange, metaTitle} from "./Redux/Store";
+import StoreContext from "./StoreContext";
 
-const App = (props) => {
+const App = () => {
     return(
         <>
             <Router>
                 <div className={a.background}>
                     <div className={a.container}>
                         <div>
-                            <Header
-                                Menu = {props.store.Menu.Menu}
-                                Logo = {props.store.TextSiteStore._Logo}
-                                Phone = {props.store.Contacts.Phone}
-                                Email = {props.store.Contacts.Email}
-                                _Language = {props.store.TextSiteStore._Language}
-                                _TopHEaderBar = {props.store.TextSiteStore._TopHEaderBar}
-                                _CloseTopHeaderBar = {props.store.TextSiteStore._CloseTopHeaderBar}
-                                languageChange = {languageChange}
-                                metaTitle = {metaTitle}
-                            />
+                            <Header />
                         </div>
                     </div>
                 </div>
                 <div className={a.container}>
                     <div>
-                        <>
-                            <Switch>
-                                {localStorage.getItem('language') !== null ?
-                                    localStorage.getItem('language') === 'ru' ?
-                                        props.store.Menu.Menu.map((route, index) => (
-                                            <Route
-                                                key={index}
-                                                path={route.path}
-                                                exact={route.exact}
-                                                children={<route.mainRu />}
-                                            />
-                                        ))
+                        <StoreContext.Consumer>
+                            { store => (
+                                <Switch>
+                                    {localStorage.getItem('language') !== null ?
+                                        localStorage.getItem('language') === 'ru' ?
+                                            store.Menu.Menu.map((route, index) => (
+                                                <Route
+                                                    key={index}
+                                                    path={route.path}
+                                                    exact={route.exact}
+                                                    children={<route.mainRu />}
+                                                />
+                                            ))
+                                            :
+                                            store.Menu.Menu.map((route, index) => (
+                                                <Route
+                                                    key={index}
+                                                    path={route.path}
+                                                    exact={route.exact}
+                                                    children={<route.mainEn />}
+                                                />
+                                            ))
                                         :
-                                        props.store.Menu.Menu.map((route, index) => (
+                                        store.Menu.Menu.map((route, index) => (
                                             <Route
                                                 key={index}
                                                 path={route.path}
                                                 exact={route.exact}
-                                                children={<route.mainEn />}
+                                                children={<route.mainEn/>}
                                             />
                                         ))
-                                    :
-                                    props.store.Menu.Menu.map((route, index) => (
-                                        <Route
-                                            key={index}
-                                            path={route.path}
-                                            exact={route.exact}
-                                            children={<route.mainEn/>}
-                                        />
-                                    ))
-                                }
+                                    }
 
-                            </Switch>
-                        </>
+                                </Switch>
+                            )}
+                        </StoreContext.Consumer>
                     </div>
 
                 </div>
                 <div className={a.background}>
-                    <Footer
-                        Menu = {props.store.Menu.Menu}
-                    />
+                    <StoreContext.Consumer>
+                        { store => (
+                            <Footer
+                                Menu = {store.Menu.Menu}
+                            />
+                        )}
+                    </StoreContext.Consumer>
                 </div>
             </Router>
         </>
-
     )
 }
 

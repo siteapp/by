@@ -7,62 +7,73 @@ import TopHeader from './TopHeader/TopHeader';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import {editPhone} from "../../Redux/Store";
+import StoreContext from "../../StoreContext";
+import store from "../../Redux/Redux";
 
 
 const Header = (props) => {
-    let menu = props.Menu,
-        logo = props.Logo,
-        phone = props.Phone,
-        email = props.Email,
-        _Language = props._Language,
-
-        _TopHEaderBar = props._TopHEaderBar,
-        _CloseTopHeaderBar = props._CloseTopHeaderBar,
-        languageChange = props.languageChange,
-        metaTitle = props.metaTitle;
-
     return(
         <>
             <Row>
                 <Col>
-                    <TopHeader
-                        _TopHEaderBar = {_TopHEaderBar}
-                        _Language = {_Language}
-                        languageChange = {languageChange}
-                        _CloseTopHeaderBar = {_CloseTopHeaderBar}
-                    />
+                    <StoreContext.Consumer>
+                        { store => (
+                            <TopHeader
+                                _TopHEaderBar = {store.TextSiteStore._TopHEaderBar}
+                                _Language = {store.TextSiteStore._Language}
+                                languageChange = {store.languageChange}
+                                _CloseTopHeaderBar = {store.TextSiteStore._CloseTopHeaderBar}
+                            />
+                        )}
+                    </StoreContext.Consumer>
                 </Col>
             </Row>
             <Row className={h.flex}>
                 <Col span={5}>
-                    <Logo
-                        logo = {logo}
-                    />
+                    <Logo />
                 </Col>
 
                 <Col span={12} className={h.menu}>
                     <nav>
                         <ul>
-                            <Menu
-                                menu = {menu}
-                                metaTitle = {metaTitle}
-                            />
+                            <StoreContext.Consumer>
+                                { store => (
+                                    <Menu
+                                        menu = {store.Menu.Menu}
+                                        metaTitle = {store.TextSiteStore._MetaTitle}
+                                    />
+                                )}
+                            </StoreContext.Consumer>
                         </ul>
                     </nav>
                 </Col>
 
                 <Col span={6} className={h.phones}>
-                    <a className={h.edit} href="#" onClick={() => editPhone({type: 'EDIT-PHONE', event: '+375 00 000-00-00'})}>Edit (Click, hover)</a>
+                    <StoreContext.Consumer>
+                        { store => (
+                            <a className={h.edit} href="#" onClick={() => editPhone({type: 'EDIT-PHONE', event: '+375 00 000-00-00'})}>Edit (Click, hover)</a>
+                        )}
+                    </StoreContext.Consumer>
 
                     <PhoneOutlined />
-                    <a className={h.phone} href={`tel:${phone}`}>
-                        {phone}
-                    </a>
 
-                    <a className={h.email} href={`emailTo:${email}`}>
-                        <span></span>
-                        <span>{email}</span>
-                    </a>
+                    <StoreContext.Consumer>
+                        { store => (
+                            <a className={h.phone} href={`tel:${store.Contacts.Phone}`}>
+                                {store.Contacts.Phone}
+                            </a>
+                        )}
+                    </StoreContext.Consumer>
+
+                    <StoreContext.Consumer>
+                        { store => (
+                            <a className={h.email} href={`emailTo:${store.Contacts.Email}`}>
+                                <span></span>
+                                <span>{store.Contacts.Email}</span>
+                            </a>
+                        )}
+                    </StoreContext.Consumer>
+
                 </Col>
             </Row>
         </>
