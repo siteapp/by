@@ -26,64 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8925f90f-868e-47a8-a6fb-84a3cbf60f6c" name="Default Changelist" comment="UPDATE: REDUX fixed 26/08/2021">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Logo/Logo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Menu/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Menu/Menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Menu/Menu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/TopHeader/TopHeader.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/En/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/En/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/En/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/En/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/Ru/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Ru/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/Ru/Main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Ru/Main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/About/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/About/En/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/About/En/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/About/Ru/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/About/Ru/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Contacts/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Contacts/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Contacts/En/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Contacts/En/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Contacts/Ru/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Contacts/Ru/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Developen/Developen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Developen/Developen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Developen/En/Developen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Developen/En/Developen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page/Developen/Ru/Developen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page/Developen/Ru/Developen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/About-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/About-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Language-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Language-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Menu-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Menu-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Phone-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Phone-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Redux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/TextSiteStore-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/TextSiteStore-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Theme-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Theme-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/closeTopBarActionCreator-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/closeTopBarActionCreator-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/State.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StoreContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts/gunnyrewritten.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/fonts/gunnyrewritten.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/computer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/computer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/insta_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/insta_svg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/mobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mobile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/telega_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/telega_svg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/viber_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/viber_svg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/wt_svg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/wt_svg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +143,7 @@
       <workItem from="1629956525897" duration="34912000" />
       <workItem from="1630042094935" duration="5618000" />
       <workItem from="1649188615138" duration="403000" />
-      <workItem from="1649189191994" duration="352000" />
+      <workItem from="1649189191994" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="TestDriveGitHub">
       <created>1628689506834</created>
@@ -320,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630011546800</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="init">
+      <created>1649189896241</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1649189896241</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,9 +326,14 @@
     <MESSAGE value="UPDATE: UPDATE Reducter 26/08/2021" />
     <MESSAGE value="UPDATE: REDUX 26/08/2021" />
     <MESSAGE value="UPDATE: REDUX fixed 26/08/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: REDUX fixed 26/08/2021" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1418" height="677" key="DiffContextDialog" timestamp="1649190309643">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="92" y="92" width="1418" height="677" key="DiffContextDialog/0.0.1603.862/1920.0.1603.862@0.0.1603.862" timestamp="1649190309643" />
     <state x="581" y="185" key="FileChooserDialogImpl" timestamp="1649189019667">
       <screen x="0" y="0" width="1603" height="862" />
     </state>
@@ -398,5 +354,17 @@
       <screen x="0" y="0" width="1603" height="862" />
     </state>
     <state width="1581" height="223" key="GridCell.Tab.0.right/0.0.1603.862/1920.0.1603.862@0.0.1603.862" timestamp="1649189020620" />
+    <state x="645" y="343" key="VCS.ChangelistChooser" timestamp="1649189837786">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="645" y="343" key="VCS.ChangelistChooser/0.0.1603.862/1920.0.1603.862@0.0.1603.862" timestamp="1649189837786" />
+    <state x="393" y="163" key="Vcs.Push.Dialog.v2" timestamp="1649189909208">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="393" y="163" key="Vcs.Push.Dialog.v2/0.0.1603.862/1920.0.1603.862@0.0.1603.862" timestamp="1649189909208" />
+    <state x="601" y="331" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1649189729568">
+      <screen x="0" y="0" width="1603" height="862" />
+    </state>
+    <state x="601" y="331" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1603.862/1920.0.1603.862@0.0.1603.862" timestamp="1649189729568" />
   </component>
 </project>
